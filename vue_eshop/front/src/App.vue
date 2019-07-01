@@ -100,7 +100,7 @@
                         <Col span="8">
                             <div class="layout-logo">
                                 <img class='img' src="../src/assets/logo.png" alt="">           
-                            </div class="layout-logo">
+                            </div>
                         </Col>
                         <Col span="8">
                             <h1>E-shop后台管理系统</h1>
@@ -152,9 +152,7 @@
     }
 </script>
 
-<style>
-
-        
+<style>  
     .active{
     color: #fff;
     }

@@ -9,13 +9,13 @@
         <Tree :data="data" :render="renderContent" show-checkbox @on-check-change="onCheckchange"></Tree>
         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
             <FormItem label="分类标题" prop="title">
-                <Input v-model="formValidate.title" placeholder="请输入分类标题"></Input>
+                <Input v-model="formValidate.title" placeholder="请输入分类标题"/>
             </FormItem>
             <FormItem label="分类父Id" prop="parentId">
-                <Input v-model="formValidate.parentId"></Input>
+                <Input v-model="formValidate.parentId"/>
             </FormItem>
             <FormItem label="分类type" prop="type">
-                <Input v-model="formValidate.type"></Input>
+                <Input v-model="formValidate.type"/>
             </FormItem>
     
             <FormItem>
