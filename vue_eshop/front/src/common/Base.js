@@ -136,7 +136,8 @@ export default{
                     }
                 });
             }else{
-                alert('请勾选至少一项来进行删除')
+                //alert('请勾选至少一项来进行删除')
+                this.$Message.warning('请勾选至少一项来进行删除');
             }         
         },
         updata(data){
