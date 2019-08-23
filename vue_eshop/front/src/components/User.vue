@@ -48,8 +48,7 @@
                         <Input v-model="data1[num].password" placeholder="Enter your password"></Input>
                     </FormItem>
                     <FormItem>
-                        <Button type="primary" @click="updata(data1[num])">Submit</Button>
-                        <Button type="ghost" @click="handleReset(data1[num])" style="margin-left: 8px">Reset</Button>
+                        <Button type="primary" @click="updata(data1[num])">Submit</Button> 
                     </FormItem>
                 </Form>
             </Modal>
@@ -70,7 +69,7 @@
                 ids:[],
                 data1:[{name:'',mail:'',password:''}],
                 formValidate: {
-                    name: 'huhao',
+                    name: ' ',
                     mail: '@qq.com',
                     password:''
                 },
@@ -108,7 +107,6 @@
                         key: 'email',
                         render: (h, params) => {
                             return h('div', [
-
                                 h('strong', params.row.mail)
                             ]);
                         }
@@ -118,8 +116,16 @@
                         key: 'password',
                         render: (h, params) => {
                             return h('div', [
-
                                 h('strong', params.row.password)
+                            ]);
+                        }
+                    },
+                    {
+                        title: 'city',
+                        key: 'city',
+                        render: (h, params) => {
+                            return h('div', [
+                                h('strong', params.row.city)
                             ]);
                         }
                     },

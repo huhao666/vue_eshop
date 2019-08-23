@@ -41,14 +41,14 @@ export default{
                     }).then(res=>{
                         
                         this.getData();
-                        this.$Message.success('success！');
+                        this.$Message.success('Success！');
   
                         //重置form表单内容，(对象合并，object.assign),提交后input里的值为数据初始值状态
                         Object.assign(this.$options.data().formValidate,this.$data.formValidate)
                         this.modal=false;
                     });
                 } else {
-                    this.$Message.error('Fail!');
+                    this.$Message.error('Submit Fail!');
                 }
             })
         },
@@ -56,10 +56,10 @@ export default{
             this.$refs[name].resetFields();
         },
         ok () {
-            this.$Message.info('Clicked ok');
+            this.$Message.success('Ok');
         },
         cancel () {
-            this.$Message.info('Clicked cancel');
+            this.$Message.warning('Cancel');
         },
         show (index) {
             this.$Modal.info({
@@ -69,19 +69,19 @@ export default{
         },
         remove (params) {
             this.$Modal.confirm({
-                title: 'Title',
+                title: '',
                 content: '<p>确认删除</p>',
                 onOk: () => {           
                     this.$http({
                         method:'delete',
                         url:`http://localhost:3000/${this.module}/data/${params.row._id}`,      
                     }).then(res=>{
-                        this.$Message.info('Clicked ok');
+                        this.$Message.success('Success Ok');
                         this.getData();
                     })
                 },
                 onCancel: () => {
-                    this.$Message.info('Clicked cancel');
+                    this.$Message.warning('Cancel');
                 }
             });
             
