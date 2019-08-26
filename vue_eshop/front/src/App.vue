@@ -123,7 +123,7 @@
                         <BreadcrumbItem v-if="(this.$route.matched)[0].path=='/product'">产品管理</BreadcrumbItem>
                     </Breadcrumb>
                     <Card>
-                        <div style="height: 600px">
+                        <div style="min-height: 600px">
                           
                           <router-view></router-view>
 

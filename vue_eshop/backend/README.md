@@ -26,4 +26,8 @@ supervisor ./bin/www
 
 新闻管理[post]
 
-产品管理[post]
+* 显示列表[post] http://localhost:3000/news/list    
+* 增加新闻[post] http://localhost:3000/news/data  (传参 title、content)
+* 删除新闻[delete] http://localhost:3000/news/data/5d5f7d5f3bdeff24e436e6e4  (data/后面带的是id)
+* 修改新闻[put] http://localhost:3000/news/data/5d5f7d543bdeff24e436e6e0  (data/后面带的是id)
+
