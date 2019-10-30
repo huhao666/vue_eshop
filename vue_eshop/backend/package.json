@@ -18,6 +18,6 @@
   },
   "devDependencies": {
     "cors": "^2.8.4",
-    "mongoose": "^4.13.9"
+    "mongoose": "^5.7.7"
   }
 }
