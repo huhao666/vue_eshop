@@ -3,7 +3,7 @@ import Vuex  from 'vuex';
 
 Vue.use(Vuex);
 
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
     /*
     1.我们需要有一个login的状态，以辨别用户是否已经登录
     2.mutations只做数据修改
@@ -14,16 +14,19 @@ export const store = new Vuex.Store({
     那么前面的页面只剩下2个工作内容，一0个getters，一个actions
     */
 	state:{
-		login: false
+		isLogin : false
 	},
 	getters:{
-		login: state =>{
-			return state.login;
+		isLogin : state =>{
+			return state.isLogin ;
 		}
 	},
 	mutations:{
-		checkLogin:()=>{
-            state.login = payload;
+		toLogin(state,payload){
+            state.isLogin  = payload;
+        },
+        loginOut(state,payload){
+            state.isLogin  = false;
         }
 	},
 	actions:{
@@ -32,3 +35,4 @@ export const store = new Vuex.Store({
         }
 	}
 })
+export default store;

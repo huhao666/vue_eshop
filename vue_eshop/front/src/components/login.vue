@@ -42,6 +42,7 @@ export default {
       this.$refs[name].validate((valid) => {
         if (valid) {
           this.$Message.success('提交成功!');
+          this.$store.commit("toLogin",true); 
           this.$router.push({
             path: '/home'
           })

@@ -47,9 +47,16 @@
                             <h1>E-shop后台管理系统</h1>
                         </Col>
                         <Col span="8">
-                            <div class="layout-nav">                      
-                                <Button type="success"> <router-link to="/login">登录</router-link></Button>  
-                                <Button type="primary">注册</Button>                    
+
+                            <div class="layout-nav">
+                                {{$store.state.isLogin}}
+                                <template v-if="this.$store.state.isLogin">
+                                    <Button type="primary" @click="loginOut">退出</Button> 
+                                </template>
+                                <template v-else>
+                                    <Button type="success"> <router-link to="/login">登录</router-link></Button>  
+                                    <Button type="primary">注册</Button> 
+                                </template>        
                             </div>
                         </Col>
                     </Row>         
@@ -79,7 +86,8 @@
     export default {
         data () {
             return {
-                isCollapsed: false
+                isCollapsed: false,
+
             };
         },
         computed: {
@@ -88,6 +96,19 @@
                     'menu-item',
                     this.isCollapsed ? 'collapsed-menu' : ''
                 ]
+            }
+        },
+        created() {
+            if(!this.$store.state.isLogin){
+                this.$router.push({
+                    path: '/login'
+                })
+            }
+        },
+        methods: {
+            loginOut() {
+                this.$store.commit("loginOut");
+                //this.$router.push("/login")
             }
         }
     }
