@@ -19,7 +19,6 @@ const router = new VueRouter({
   mode:'hash'
 });
 
-
 new Vue({
   el: '#app',
   router,
