@@ -25,7 +25,7 @@ const store = new Vuex.Store({
 		toLogin(state,payload){
             state.isLogin  = payload;
         },
-        loginOut(state,payload){
+        loginOut(state){
             state.isLogin  = false;
         }
 	},

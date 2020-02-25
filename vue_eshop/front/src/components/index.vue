@@ -38,16 +38,15 @@
             <Layout>
                 <div class="ivu-layout-header" style="background: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px 2px;">
                     <Row>
-                        <Col span="8">
+                        <i-col :xs="2" :sm="4" :md="6" :lg="8">
                             <div class="layout-logo">
                                 <img class='img' src="../assets/logo.png" alt="">           
                             </div>
-                        </Col>
-                        <Col span="8">
+                        </i-col>
+                        <i-col :xs="20" :sm="16" :md="12" :lg="8">
                             <h1>E-shop后台管理系统</h1>
-                        </Col>
-                        <Col span="8">
-
+                        </i-col>
+                        <i-col :xs="2" :sm="4" :md="6" :lg="8">
                             <div class="layout-nav">
                                 {{$store.state.isLogin}}
                                 <template v-if="this.$store.state.isLogin">
@@ -58,8 +57,8 @@
                                     <Button type="primary">注册</Button> 
                                 </template>        
                             </div>
-                        </Col>
-                    </Row>         
+                        </i-col>
+                    </Row>
                 </div>
                 <Content :style="{padding: '0 16px 16px'}">
                     <Breadcrumb :style="{margin: '16px 0'}">
