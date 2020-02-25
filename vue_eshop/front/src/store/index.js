@@ -11,7 +11,7 @@ const store = new Vuex.Store({
     4.前端页面调用的时候，只调用用actions，不调用mutations
 
     前面页面既不直接调this.$store.state,也不直接去触发mutations，
-    那么前面的页面只剩下2个工作内容，一0个getters，一个actions
+    那么前面的页面只剩下2个工作内容，一个getters，一个actions
     */
 	state:{
 		isLogin : false
