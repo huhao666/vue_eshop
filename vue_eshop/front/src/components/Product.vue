@@ -44,7 +44,7 @@
     </Upload>
     <Modal title="View Image" v-model="visible">
       <img
-        :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'"
+        :src="'http://tva2.sinaimg.cn/large/' + imgName "
         v-if="visible"
         style="width: 100%"
       />
@@ -57,14 +57,19 @@ export default {
     return {
       defaultList: [
         {
-          name: "a42bdcc1178e62b4694c830f028db5c0",
+          name: "b535b7d3ly1g874l3vsyyj20ji08i0vd",
           url:
-            "https://o5wwk8baw.qnssl.com/a42bdcc1178e62b4694c830f028db5c0/avatar"
+            "http://tva2.sinaimg.cn/large/b535b7d3ly1g874l3vsyyj20ji08i0vd.jpg"
         },
         {
-          name: "bc7521e033abdd1e92222d733590f104",
+          name: "b535b7d3ly1g874l3vsyyj20ji08i0vd",
           url:
-            "https://o5wwk8baw.qnssl.com/bc7521e033abdd1e92222d733590f104/avatar"
+            "http://tva2.sinaimg.cn/large/b535b7d3ly1g874l3vsyyj20ji08i0vd.jpg"
+        },
+        {
+          name: "b535b7d3ly1g874l3vsyyj20ji08i0vd",
+          url:
+            "http://tva2.sinaimg.cn/large/b535b7d3ly1g874l3vsyyj20ji08i0vd.jpg"
         }
       ],
       imgName: "",
@@ -118,6 +123,7 @@ export default {
 </script>
 <style>
 .demo-upload-list {
+  margin-top: 20px;
   display: inline-block;
   width: 100px;
   height: 100px;

@@ -48,6 +48,7 @@
                         </i-col>
                         <i-col :xs="2" :sm="4" :md="6" :lg="8">
                             <div class="layout-nav">
+                                {{$store.state.user}}
                                 {{$store.state.isLogin}}
                                 <template v-if="this.$store.state.isLogin">
                                     <Button type="primary" @click="loginOut">退出</Button> 
@@ -107,6 +108,7 @@
         methods: {
             loginOut() {
                 this.$store.commit("loginOut");
+                this.$Message.warning('已退出!');
                 //this.$router.push("/login")
             }
         }

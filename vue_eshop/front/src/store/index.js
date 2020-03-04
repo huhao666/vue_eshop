@@ -15,7 +15,7 @@ const store = new Vuex.Store({
     */
 	state:{
         isLogin : false,
-        user: ""
+        user: "null"
 	},
 	getters:{
 		isLogin : state =>{
@@ -24,12 +24,12 @@ const store = new Vuex.Store({
 	},
 	mutations:{
 		toLogin(state,payload){
-            state.isLogin  = payload;
-            //state.isLogin  = payload.isLogin;
-            //state.user = payload.user;
+            state.isLogin  = payload.isLogin;
+            state.user = payload.user;
         },
         loginOut(state){
             state.isLogin  = false;
+            state.user  = "null";
         }
 	},
 	actions:{

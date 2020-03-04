@@ -41,9 +41,9 @@ export default {
     handleSubmit (name) {
       this.$refs[name].validate((valid) => {
         if (valid) {
+          let data = {isLogin:true,user:this.loginData.acct};
+          this.$store.commit("toLogin", data);
           this.$Message.success('提交成功!');
-          this.$store.commit("toLogin",true); 
-          //this.$store.commit("toLogin",{"isLogin":true,"name":huhao}); 
           this.$router.push({
             path: '/home'
           })
