@@ -14,7 +14,8 @@ const store = new Vuex.Store({
     那么前面的页面只剩下2个工作内容，一个getters，一个actions
     */
 	state:{
-		isLogin : false
+        isLogin : false,
+        user: ""
 	},
 	getters:{
 		isLogin : state =>{
@@ -24,6 +25,8 @@ const store = new Vuex.Store({
 	mutations:{
 		toLogin(state,payload){
             state.isLogin  = payload;
+            //state.isLogin  = payload.isLogin;
+            //state.user = payload.user;
         },
         loginOut(state){
             state.isLogin  = false;

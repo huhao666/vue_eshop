@@ -43,6 +43,7 @@ export default {
         if (valid) {
           this.$Message.success('提交成功!');
           this.$store.commit("toLogin",true); 
+          //this.$store.commit("toLogin",{"isLogin":true,"name":huhao}); 
           this.$router.push({
             path: '/home'
           })
