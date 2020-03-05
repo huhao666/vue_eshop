@@ -65,11 +65,6 @@ export default {
           name: "b535b7d3ly1g874l3vsyyj20ji08i0vd",
           url:
             "http://tva2.sinaimg.cn/large/b535b7d3ly1g874l3vsyyj20ji08i0vd.jpg"
-        },
-        {
-          name: "b535b7d3ly1g874l3vsyyj20ji08i0vd",
-          url:
-            "http://tva2.sinaimg.cn/large/b535b7d3ly1g874l3vsyyj20ji08i0vd.jpg"
         }
       ],
       imgName: "",
