@@ -43,7 +43,7 @@ export default {
         if (valid) {
           let data = {isLogin:true,user:this.loginData.acct};
           this.$store.commit("toLogin", data);
-          this.$Message.success('提交成功!');
+          this.$Message.success('欢迎登录!');
           this.$router.push({
             path: '/home'
           })
@@ -64,6 +64,9 @@ export default {
   height: 100vh;
   background-color: #1c2438;
   position: relative;
+  background: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .login .from-wrap{
   position: fixed;
